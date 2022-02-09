@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>
+        <a mat-button>
+          <mat-icon>stacked_bar_chart</mat-icon>Oncolog
+        </a>
+      
+      </span>
+
+      <span class="example-spacer"></span>
+  
+        <app-login-button *ngIf="(auth.isAuthenticated$ | async) === false"></app-login-button>
+        <div *ngIf="auth.isAuthenticated$" routerLink="/inscription" > </div>  
+        <app-logout-button *ngIf="auth.isAuthenticated$|async"></app-logout-button>
+      </mat-toolbar-row>
+    
+    <mat-toolbar-row>
+      <span></span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button routerLink="/" >Home</button>
+      <button mat-raised-button routerLink="/pourqui">Pour qui?</button>
+      <button mat-raised-button routerLink="/equipe">Equipe</button>
+      <button mat-raised-button routerLink="/devclinique">Dev clinique</button>
+      <button mat-raised-button routerLink="/publications">Publications</button>
+      <button mat-raised-button routerLink="/temoignages">Témoignage</button>
+      <button mat-raised-button routerLink="/contact">Contact</button>
+    </mat-toolbar-row>
+  
+  </mat-toolbar>
